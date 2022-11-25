@@ -1,0 +1,12 @@
+---
+title: "R BASE"
+subtitle: "Funciones basicas y librerias"
+output: html_notebook
+---
+
+Las funciones son procedimientos (formulas, algoritmos entre otras) programados y se utilizan en los objetos para realizar alguna actividad. Algunas funciones hacen parte de la instalacion de R de forma inicial y son denominadas **FUNCIONES R BASE**.
+
+Son similares a las usadas en hojas de calculo y siguen mas o menos las mismas reglas de uso, con algunos cambios.
+
+# Estrutura de una funcion en R
+
