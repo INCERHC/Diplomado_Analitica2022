@@ -4,9 +4,108 @@ subtitle: "Funciones basicas y librerias"
 output: html_notebook
 ---
 
-Las funciones son procedimientos (formulas, algoritmos entre otras) programados y se utilizan en los objetos para realizar alguna actividad. Algunas funciones hacen parte de la instalacion de R de forma inicial y son denominadas **FUNCIONES R BASE**.
+Las funciones son procedimientos (formulas, algoritmos entre otras) programados y se utilizan en los objetos para realizar alguna actividad. Algunas funciones hacen parte de la instalación de R de forma inicial y son denominadas **FUNCIONES R BASE**.
 
 Son similares a las usadas en hojas de calculo y siguen mas o menos las mismas reglas de uso, con algunos cambios.
 
+Una función realiza algún cálculo sobre un objeto. El uso de una función consiste en:
+
 # Estrutura de una funcion en R
+
+1. Nombre de la función
+2. Parentesis
+3. 0 o mas entradas (argumentos)
+
+Los argumentos tienen nombres, pero no siempre se usan.
+
+## La funciones tienen pueden tener cero argumentos
+```{r}
+Sys.time()
+```
+
+
+## Funciones con 1 o mas argumentos
+
+funciones R Base para explorar un dataset.
+
+```{r}
+head()
+ncol()
+nrow()
+str()
+class()
+colnames()
+row.names()
+
+# identificación de objetos
+
+is.array()
+is.character()
+is.character()
+is.data.frame()
+is.factor()
+is.na()
+```
+
+**¿ Importan el orden de los argumentos al implementar una función ?**
+
+Si uso el nombre del argumento no importa donde se ubique como argumento R la ejecutara, pero si no uso el nombre del argumento, entonces debe ubicarlo en la posición donde la ayuda la función indique que debería ir.
+
+```{r}
+?head()
+head(bike, 10)
+head(n=10, x = bike)
+```
+
+## Funciones estadisticas en R base
+
+- Medidas de tendencia central
+
+```{r}
+mean()
+median()
+mode()
+```
+
+- medidas de dispersión
+
+```{r}
+min()              # minimo del conjunto de datos
+max()              # maximo
+quantile()         # percentiles
+sd()               # desviacion estandar
+```
+
+- distribuciones de probabilidad
+
+  - Normal estandar
+  
+```{r}
+dnorm(x, mean = 0, sd = 1, log = FALSE)                         # funcion densidad de probabilidad
+pnorm(q, mean = 0, sd = 1, lower.tail = TRUE, log.p = FALSE)    # funcion de distribucion acumulada
+qnorm(p, mean = 0, sd = 1, lower.tail = TRUE, log.p = FALSE)    # funcion quantilica
+rnorm(n, mean = 0, sd = 1)                                      # generador de nuemros aleatorios bajo un distribucion normal
+```
+
+  - Binomial
+  
+```{r}
+dbinom(x, size, prob, log = FALSE)
+pbinom(q, size, prob, lower.tail = TRUE, log.p = FALSE)
+qbinom(p, size, prob, lower.tail = TRUE, log.p = FALSE)
+rbinom(n, size, prob)
+```
+
+  - poisson
+  
+```{r}
+dpois(x, lambda, log = FALSE)
+ppois(q, lambda, lower.tail = TRUE, log.p = FALSE)
+qpois(p, lambda, lower.tail = TRUE, log.p = FALSE)
+rpois(n, lambda)
+```
+
+
+
+
 
